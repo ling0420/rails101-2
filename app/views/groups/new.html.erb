@@ -2,25 +2,7 @@
   <h2>新增讨论版面</h2>
 
   <hr>
-  <%= form_for @group do |f| %>
 
-  <% if @group.errors.any? %>
-  <ul>
-    <% @group.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-    <% end %>
-  </ul>
-  <% end %>
-
-  标题
-  <%= f.text_field :title %> #名为title的文本表单
-  <br>
-  叙述
-  <br>
-  <%= f.text_area :description %> #名为description的区域文本表单
-  <br>
-
-  <%= f.submit "Submit", :disable_with => 'Submiting...' %> #名为Submit的提交按钮
-  <% end %>
+  <%= render "form" %>
 
 </div>
